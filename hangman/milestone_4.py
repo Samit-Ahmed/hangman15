@@ -29,6 +29,13 @@ class Hangman:
         self.num_letters = len(set(self.word))
         self.list_of_guesses = []
 
+    """
+    
+    letter: guess letter in lowercase
+    Function checks to see if guess is right
+    
+    """
+
     def check_guess(self, guess):
         letter = guess.lower()
         if letter in self.word:
@@ -41,6 +48,13 @@ class Hangman:
             self.num_lives -= 1
             print(f"Sorry, {letter} is not in the word.")
             print(f"You have {self.num_lives} lives left.")
+
+    """
+    
+    guess = User is asked to guess a letter
+    Validation to check whether a letter has been entered
+    
+    """
 
     def ask_for_user_input(self):
         while True:
